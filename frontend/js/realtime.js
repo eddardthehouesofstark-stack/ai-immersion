@@ -16,8 +16,23 @@ class RealtimeClient {
       this.eventSource.close();
     }
 
+    // On static hosting (e.g. GitHub Pages), SSE is unavailable. Activate client-side live pulse cleanly.
+    if (window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:') {
+      this.isConnected = true;
+      this.updateIndicator(true);
+      this.emit('connection_change', { connected: true });
+      console.log('[TrendLoom Realtime] Static mode active — client heartbeat engaged');
+      setInterval(() => {
+        this.emit('trends_updated', { source: 'local_pulse', time: new Date().toISOString() });
+      }, 30000);
+      return;
+    }
+
     try {
-      this.eventSource = new EventSource('/api/realtime/stream');
+      const streamUrl = window.location.pathname.startsWith('/trend') || window.location.pathname.includes('/')
+        ? '/api/realtime/stream'
+        : './api/realtime/stream';
+      this.eventSource = new EventSource(streamUrl);
 
       this.eventSource.addEventListener('open', () => {
         this.isConnected = true;

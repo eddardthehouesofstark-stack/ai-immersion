@@ -41,7 +41,7 @@ export async function initForecastIntelligence() {
         <tr>
           <td>
             <div style="font-weight: 600; font-size: 15px;">
-              <a href="/trend-detail.html?id=${encodeURIComponent(t.id)}" style="color: var(--text-primary); text-decoration: none;">
+              <a href="./trend-detail.html?id=${encodeURIComponent(t.id)}" style="color: var(--text-primary); text-decoration: none;">
                 ${t.name}
               </a>
             </div>
@@ -72,7 +72,7 @@ export async function initForecastIntelligence() {
             <div style="font-size: 11px; color: var(--text-muted);">${t.source_count} Sources</div>
           </td>
           <td>
-            <a href="/trend-detail.html?id=${encodeURIComponent(t.id)}" class="tl-btn tl-btn-outline" style="padding: 5px 10px; font-size: 11px;">
+            <a href="./trend-detail.html?id=${encodeURIComponent(t.id)}" class="tl-btn tl-btn-outline" style="padding: 5px 10px; font-size: 11px;">
               Report ↗
             </a>
           </td>

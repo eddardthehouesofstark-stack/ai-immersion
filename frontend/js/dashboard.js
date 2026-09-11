@@ -113,7 +113,7 @@ export function renderTrendCards(trends, container) {
   container.innerHTML = trends.map(t => {
     const updated = new Date(t.last_updated).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
     return `
-      <a href="/trend-detail.html?id=${encodeURIComponent(t.id)}" class="tl-trend-card" data-trend-id="${t.id}">
+      <a href="./trend-detail.html?id=${encodeURIComponent(t.id)}" class="tl-trend-card" data-trend-id="${t.id}">
         <div class="tl-card-media">
           <img src="${t.image_url || 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'}" alt="${t.name}" class="tl-card-img" loading="lazy">
           <div class="tl-card-badge-top">

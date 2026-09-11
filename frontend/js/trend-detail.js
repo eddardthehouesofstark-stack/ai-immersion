@@ -16,7 +16,7 @@ export async function initTrendDetail() {
       <div style="padding: 60px; text-align: center;">
         <h2 class="tl-h2">No Trend Selected</h2>
         <p style="color: var(--text-muted); margin-top: 12px;">Please select a trend from the Explorer or Live Dashboard.</p>
-        <a href="/trends.html" class="tl-btn tl-btn-primary" style="margin-top: 20px;">Explore Trends</a>
+        <a href="./trends.html" class="tl-btn tl-btn-primary" style="margin-top: 20px;">Explore Trends</a>
       </div>
     `;
     return;
@@ -36,7 +36,7 @@ export async function initTrendDetail() {
 
     container.innerHTML = `
       <div class="tl-detail-container">
-        <a href="/trends.html" class="tl-back-link">← Back to Trend Explorer</a>
+        <a href="./trends.html" class="tl-back-link">← Back to Trend Explorer</a>
 
         <!-- Hero Intelligence Block -->
         <div class="tl-detail-hero">
