@@ -1,5 +1,11 @@
 # TrendLoom — AI-Powered Fashion Trend Intelligence Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-692418?style=for-the-badge&logo=github)](https://eddardthehouesofstark-stack.github.io/ai-immersion/)
+[![Platform Status](https://img.shields.io/badge/System-Online-2E7D32?style=for-the-badge)](https://eddardthehouesofstark-stack.github.io/ai-immersion/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-1C1917?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+> 🌐 **Live Production Demo**: [https://eddardthehouesofstark-stack.github.io/ai-immersion/](https://eddardthehouesofstark-stack.github.io/ai-immersion/)
+
 TrendLoom is a real-time fashion and textile trend intelligence platform designed for fashion designers, retail buyers, merchandisers, and apparel manufacturers. It monitors search momentum, editorial coverage, social discourse, and verified regional signals to identify emerging textile trends across India and regional artisanal clusters (with dedicated focus on Tamil Nadu handlooms).
 
 ![TrendLoom Dashboard Preview](https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80)

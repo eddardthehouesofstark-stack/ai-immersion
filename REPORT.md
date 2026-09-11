@@ -3,6 +3,7 @@
 
 **Author**: TrendLoom Engineering & Fashion Intelligence Team  
 **System Version**: 1.0.0 (Production Release)  
+**Live Application Demo**: [https://eddardthehouesofstark-stack.github.io/ai-immersion/](https://eddardthehouesofstark-stack.github.io/ai-immersion/)  
 **Target Domain**: Pan-India Textile Ecosystem & Regional Artisanal Handlooms (Tamil Nadu Deep Dive)  
 **Date**: September 2026  
 
