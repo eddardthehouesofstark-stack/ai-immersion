@@ -1,0 +1,369 @@
+/* TrendLoom - Editorial Fashion Intelligence Platform Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Strict 2-3 Color Editorial Palette */
+  --bg-canvas: #FAF9F6;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F5F4F0;
+  --bg-muted: #EFECE6;
+  
+  --text-primary: #141414;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7975;
+  --text-inverse: #FAF9F6;
+  
+  /* One Muted Luxury Accent */
+  --accent-terracotta: #8B3A2B;
+  --accent-terracotta-subtle: #F4EBE8;
+  --accent-terracotta-dark: #6E2C20;
+  
+  /* Status Indicators - Elegant, Not Neon */
+  --status-exploding: #9A2C2C;
+  --status-rising: #B25E2B;
+  --status-stable: #385E4E;
+  --status-declining: #756D60;
+  --status-fading: #8C8C88;
+  --status-online: #2E724E;
+  
+  --border-subtle: #E6E3DC;
+  --border-strong: #141414;
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --transition-smooth: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Editorial Navigation */
+.tl-header {
+  background-color: var(--bg-canvas);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.tl-header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tl-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.tl-brand-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.tl-brand-badge {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  background-color: var(--accent-terracotta-subtle);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.tl-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.tl-nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  transition: var(--transition-smooth);
+  padding: 6px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tl-nav-link:hover,
+.tl-nav-link.active {
+  color: var(--text-primary);
+}
+
+.tl-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-terracotta);
+}
+
+.tl-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* System Live Pulse Status */
+.tl-live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--status-online);
+  background: rgba(46, 114, 78, 0.08);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(46, 114, 78, 0.2);
+}
+
+.tl-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--status-online);
+  box-shadow: 0 0 0 0 rgba(46, 114, 78, 0.4);
+  animation: tl-pulse 2s infinite;
+}
+
+@keyframes tl-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 114, 78, 0.6); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(46, 114, 78, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 114, 78, 0); }
+}
+
+/* Buttons */
+.tl-btn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.tl-btn-primary {
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+}
+
+.tl-btn-primary:hover {
+  background-color: #2D2D2D;
+}
+
+.tl-btn-accent {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+}
+
+.tl-btn-accent:hover {
+  background-color: var(--accent-terracotta-dark);
+}
+
+.tl-btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.tl-btn-outline:hover {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--text-primary);
+}
+
+/* Main Container */
+.tl-main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 28px 64px;
+  flex: 1;
+}
+
+/* Editorial Headings */
+.tl-h1 {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.tl-h2 {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.tl-h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.tl-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-terracotta);
+  margin-bottom: 8px;
+}
+
+/* Status Badges */
+.tl-status-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.tl-status-EXPLODING {
+  background-color: #F8EBEB;
+  color: var(--status-exploding);
+  border: 1px solid #E8C8C8;
+}
+
+.tl-status-RISING {
+  background-color: #FBF0E8;
+  color: var(--status-rising);
+  border: 1px solid #ECD4C3;
+}
+
+.tl-status-STABLE {
+  background-color: #EBF3EE;
+  color: var(--status-stable);
+  border: 1px solid #C8DFD1;
+}
+
+.tl-status-DECLINING {
+  background-color: #F2F0EC;
+  color: var(--status-declining);
+  border: 1px solid #DCD8D0;
+}
+
+.tl-status-FADING {
+  background-color: #ECEBE9;
+  color: var(--status-fading);
+  border: 1px solid #D6D5D1;
+}
+
+/* Footer */
+.tl-footer {
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-canvas);
+  padding: 40px 28px;
+  margin-top: auto;
+}
+
+.tl-footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tl-footer-info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tl-footer-status-bar {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tl-footer-status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.tl-dot-active {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--status-online);
+}
+
+.tl-dot-idle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-terracotta);
+}

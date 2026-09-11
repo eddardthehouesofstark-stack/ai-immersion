@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trend Intelligence Report — TrendLoom</title>
+  <meta name="description" content="In-depth trend intelligence report with real momentum charts, signals, and retail stocking recommendations.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/trends.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <!-- Chart.js for Historical Observation Rendering (Section 11) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+</head>
+<body>
+
+  <!-- Editorial Header -->
+  <header class="tl-header">
+    <div class="tl-header-inner">
+      <a href="/index.html" class="tl-brand">
+        <span class="tl-brand-title">TrendLoom</span>
+        <span class="tl-brand-badge">Intelligence</span>
+      </a>
+
+      <nav class="tl-nav">
+        <a href="/index.html" class="tl-nav-link" id="navDashboard">Dashboard</a>
+        <a href="/trends.html" class="tl-nav-link" id="navTrends">Trend Explorer</a>
+        <a href="/regional.html" class="tl-nav-link" id="navRegional">Regional Intelligence</a>
+        <a href="/forecast.html" class="tl-nav-link" id="navForecast">Forecasting & Retail</a>
+      </nav>
+
+      <div class="tl-header-actions">
+        <div class="tl-live-indicator" id="liveIndicator">
+          <span class="tl-live-dot"></span>
+          <span>LIVE INTELLIGENCE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="tl-main" id="trendDetailContent">
+    <!-- Injected by trend-detail.js -->
+  </main>
+
+  <footer class="tl-footer">
+    <div class="tl-footer-inner">
+      <div class="tl-footer-info">
+        <strong>TrendLoom Intelligence Report</strong> — Real data observation policy.
+      </div>
+      <div class="tl-footer-status-bar">
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Source Grounded</div>
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Verified Wires</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

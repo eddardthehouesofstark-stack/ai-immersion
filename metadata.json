@@ -1,0 +1,6 @@
+{
+  "name": "TrendLoom",
+  "description": "AI-Powered Real-Time Fashion Trend Intelligence Platform analyzing live search, editorial, and regional signals across India and Tamil Nadu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

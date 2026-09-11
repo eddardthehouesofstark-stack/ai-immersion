@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regional Fashion Intelligence — TrendLoom</title>
+  <meta name="description" content="Regional fashion trend analysis with special focus on Tamil Nadu handloom and Pan-India textile signals.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/trends.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+</head>
+<body>
+
+  <!-- Editorial Header -->
+  <header class="tl-header">
+    <div class="tl-header-inner">
+      <a href="/index.html" class="tl-brand">
+        <span class="tl-brand-title">TrendLoom</span>
+        <span class="tl-brand-badge">Intelligence</span>
+      </a>
+
+      <nav class="tl-nav">
+        <a href="/index.html" class="tl-nav-link" id="navDashboard">Dashboard</a>
+        <a href="/trends.html" class="tl-nav-link" id="navTrends">Trend Explorer</a>
+        <a href="/regional.html" class="tl-nav-link active" id="navRegional">Regional Intelligence</a>
+        <a href="/forecast.html" class="tl-nav-link" id="navForecast">Forecasting & Retail</a>
+      </nav>
+
+      <div class="tl-header-actions">
+        <div class="tl-live-indicator" id="liveIndicator">
+          <span class="tl-live-dot"></span>
+          <span>LIVE INTELLIGENCE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="tl-main">
+    <div style="margin-bottom: 28px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div class="tl-eyebrow">Geographic Cluster Analysis</div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <h1 class="tl-h1">Regional Intelligence</h1>
+          <span id="tamilNaduFocusBadge" class="tl-brand-badge" style="display: none; background: #FAF2EF; color: var(--accent-terracotta);">Special Tamil Nadu Focus</span>
+        </div>
+        <p style="color: var(--text-secondary); margin-top: 6px; font-size: 16px;">
+          Tracking regional fashion search surges, handloom board developments, and artisanal demand across Indian states.
+        </p>
+      </div>
+
+      <!-- Region Selector (Section 15) -->
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <label for="regionalSelect" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);">Region:</label>
+        <select id="regionalSelect" class="tl-select" style="font-size: 15px; font-weight: 600; padding: 10px 16px;">
+          <option value="Tamil Nadu">Tamil Nadu (Special Deep Focus)</option>
+          <option value="India">Pan-India</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Delhi">Delhi</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Regional Highlights Strip -->
+    <div class="tl-kpi-grid" style="margin-bottom: 32px;">
+      <div class="tl-kpi-card">
+        <div class="tl-kpi-header">
+          <span class="tl-kpi-title">Current Focus</span>
+        </div>
+        <div class="tl-kpi-value" style="font-size: 28px;" id="currentRegionName">Tamil Nadu</div>
+        <div class="tl-kpi-subtext">Live Regional Feed</div>
+      </div>
+
+      <div class="tl-kpi-card">
+        <div class="tl-kpi-header">
+          <span class="tl-kpi-title">Regional Average Score</span>
+        </div>
+        <div class="tl-kpi-value" id="regionalAvgScore">86</div>
+        <div class="tl-kpi-subtext">0-100 Composite Interest</div>
+      </div>
+
+      <div class="tl-kpi-card" style="grid-column: span 2;">
+        <div class="tl-kpi-header">
+          <span class="tl-kpi-title">Leading Fabrics & Weaves in Region</span>
+        </div>
+        <div id="popularFabricsList" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Colors in Region -->
+    <div class="tl-detail-section" style="margin-bottom: 32px; padding: 20px 24px;">
+      <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px;">
+        Key Regional Color Palettes
+      </div>
+      <div id="popularColorsList" style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Trends in Region Header -->
+    <h2 class="tl-h2" style="margin-bottom: 20px;">Active Trends in Selected Region</h2>
+    <section class="tl-trends-grid" id="regionalTrendFeed">
+      <!-- Injected by regional.js -->
+    </section>
+  </main>
+
+  <footer class="tl-footer">
+    <div class="tl-footer-inner">
+      <div class="tl-footer-info">
+        <strong>TrendLoom Regional Intelligence</strong> — Handloom, textile, and cultural fashion analysis.
+      </div>
+      <div class="tl-footer-status-bar">
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Tamil Nadu Wires</div>
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Pan-India Search Index</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

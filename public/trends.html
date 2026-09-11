@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trend Explorer — TrendLoom</title>
+  <meta name="description" content="Explore and filter verified fashion trends across categories, regions, fabrics, and momentum scores.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/trends.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+</head>
+<body>
+
+  <!-- Editorial Header -->
+  <header class="tl-header">
+    <div class="tl-header-inner">
+      <a href="/index.html" class="tl-brand">
+        <span class="tl-brand-title">TrendLoom</span>
+        <span class="tl-brand-badge">Intelligence</span>
+      </a>
+
+      <nav class="tl-nav">
+        <a href="/index.html" class="tl-nav-link" id="navDashboard">Dashboard</a>
+        <a href="/trends.html" class="tl-nav-link active" id="navTrends">Trend Explorer</a>
+        <a href="/regional.html" class="tl-nav-link" id="navRegional">Regional Intelligence</a>
+        <a href="/forecast.html" class="tl-nav-link" id="navForecast">Forecasting & Retail</a>
+      </nav>
+
+      <div class="tl-header-actions">
+        <div class="tl-live-indicator" id="liveIndicator">
+          <span class="tl-live-dot"></span>
+          <span>LIVE INTELLIGENCE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="tl-main">
+    <div style="margin-bottom: 28px;">
+      <div class="tl-eyebrow">Database Catalog</div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px;">
+        <h1 class="tl-h1">Trend Explorer</h1>
+        <span id="explorerCount" style="font-size: 14px; font-weight: 600; color: var(--text-muted);">Loading trends...</span>
+      </div>
+    </div>
+
+    <!-- Filter & Search Toolbar (Section 16) -->
+    <div class="tl-filter-toolbar">
+      <div class="tl-filter-search-row">
+        <input type="text" id="explorerSearchInput" class="tl-input" placeholder="Search by trend keyword, weave, fabric, silhouette, or region...">
+      </div>
+
+      <div class="tl-filter-selects-row">
+        <select id="filterCategory" class="tl-select">
+          <option value="All">All Categories</option>
+          <option value="Women's Ethnic">Women's Ethnic</option>
+          <option value="Men's Casual">Men's Casual</option>
+          <option value="Sustainable Handloom">Sustainable Handloom</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Indian Artisanal">Indian Artisanal</option>
+        </select>
+
+        <select id="filterGender" class="tl-select">
+          <option value="All">All Genders</option>
+          <option value="Women">Women</option>
+          <option value="Men">Men</option>
+          <option value="Unisex">Unisex</option>
+        </select>
+
+        <select id="filterRegion" class="tl-select">
+          <option value="All">All Regions</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="India">Pan-India</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Maharashtra">Maharashtra</option>
+        </select>
+
+        <select id="filterStatus" class="tl-select">
+          <option value="All">All Statuses</option>
+          <option value="EXPLODING">Exploding (90–100)</option>
+          <option value="RISING">Rising (75–89)</option>
+          <option value="STABLE">Stable (50–74)</option>
+          <option value="DECLINING">Declining (25–49)</option>
+          <option value="FADING">Fading (0–24)</option>
+        </select>
+
+        <select id="filterMinScore" class="tl-select">
+          <option value="">Any Score</option>
+          <option value="80">Score 80+</option>
+          <option value="60">Score 60+</option>
+          <option value="40">Score 40+</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Trends Grid -->
+    <section class="tl-trends-grid" id="explorerTrendGrid">
+      <!-- Injected by trends.js -->
+    </section>
+  </main>
+
+  <footer class="tl-footer">
+    <div class="tl-footer-inner">
+      <div class="tl-footer-info">
+        <strong>TrendLoom Explorer</strong> — Real-time fashion signals across India and Tamil Nadu.
+      </div>
+      <div class="tl-footer-status-bar">
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Real Historical Points</div>
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Multi-Source Grounding</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

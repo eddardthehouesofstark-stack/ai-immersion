@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trend Forecasting & Retail Intelligence — TrendLoom</title>
+  <meta name="description" content="AI-driven fashion forecasting and commercial stocking recommendations based on verified historical velocity.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/trends.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+</head>
+<body>
+
+  <!-- Editorial Header -->
+  <header class="tl-header">
+    <div class="tl-header-inner">
+      <a href="/index.html" class="tl-brand">
+        <span class="tl-brand-title">TrendLoom</span>
+        <span class="tl-brand-badge">Intelligence</span>
+      </a>
+
+      <nav class="tl-nav">
+        <a href="/index.html" class="tl-nav-link" id="navDashboard">Dashboard</a>
+        <a href="/trends.html" class="tl-nav-link" id="navTrends">Trend Explorer</a>
+        <a href="/regional.html" class="tl-nav-link" id="navRegional">Regional Intelligence</a>
+        <a href="/forecast.html" class="tl-nav-link active" id="navForecast">Forecasting & Retail</a>
+      </nav>
+
+      <div class="tl-header-actions">
+        <div class="tl-live-indicator" id="liveIndicator">
+          <span class="tl-live-dot"></span>
+          <span>LIVE INTELLIGENCE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="tl-main">
+    <div style="margin-bottom: 32px;">
+      <div class="tl-eyebrow">Predictive Analytics & Commercial Strategy</div>
+      <h1 class="tl-h1">Forecasting & Retail Stocking</h1>
+      <p style="color: var(--text-secondary); margin-top: 8px; font-size: 16px; max-width: 800px;">
+        Actionable inventory intelligence for fashion buyers, boutique owners, and apparel merchandisers. Demand signals and stock recommendations are computed directly from real signal momentum and search velocity.
+      </p>
+    </div>
+
+    <!-- Forecasting Methodology Card -->
+    <div class="tl-detail-section" style="padding: 24px 28px; margin-bottom: 36px; background-color: var(--bg-surface-elevated);">
+      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-terracotta); margin-bottom: 8px;">
+        Transparent Forecasting Methodology (Section 18)
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; font-size: 13px; color: var(--text-secondary);">
+        <div>
+          <strong style="color: var(--text-primary); display: block; margin-bottom: 4px;">Velocity Tracking</strong>
+          Measures score differential across real consecutive observation windows.
+        </div>
+        <div>
+          <strong style="color: var(--text-primary); display: block; margin-bottom: 4px;">Acceleration Analysis</strong>
+          Evaluates if consumer search volume is gaining speed or reaching saturation.
+        </div>
+        <div>
+          <strong style="color: var(--text-primary); display: block; margin-bottom: 4px;">Cross-Source Consensus</strong>
+          Requires verified corroboration from multiple news outlets and search indices.
+        </div>
+        <div>
+          <strong style="color: var(--text-primary); display: block; margin-bottom: 4px;">Strict Grounding</strong>
+          Forecasts are strictly withheld if historical data points are insufficient.
+        </div>
+      </div>
+    </div>
+
+    <!-- Retail Stocking Table (Section 19) -->
+    <div class="tl-detail-section">
+      <div class="tl-detail-section-title">
+        <span>Active Retail Recommendations Table</span>
+        <span style="font-size: 12px; color: var(--text-muted);">AUTO-UPDATED ON REAL SIGNALS</span>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="tl-sources-table">
+          <thead>
+            <tr>
+              <th>Trend & Region</th>
+              <th>Score / 7d Growth</th>
+              <th>Status</th>
+              <th>Demand Forecast</th>
+              <th>Retail Stock Rec</th>
+              <th>Stock Availability Channels</th>
+              <th>Confidence</th>
+              <th>Deep Report</th>
+            </tr>
+          </thead>
+          <tbody id="forecastTableBody">
+            <!-- Injected by forecast.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="tl-footer">
+    <div class="tl-footer-inner">
+      <div class="tl-footer-info">
+        <strong>TrendLoom Forecasting</strong> — Commercial fashion inventory intelligence.
+      </div>
+      <div class="tl-footer-status-bar">
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Real Historical Points</div>
+        <div class="tl-footer-status-item"><span class="tl-dot-active"></span> Zero Simulated Data</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
